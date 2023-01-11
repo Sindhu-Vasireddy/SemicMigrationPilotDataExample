@@ -33,4 +33,12 @@ exfr:p2v1 a foaf:Person
     cv:gender "Male";
     dct:identifier "S4781267";
     dct:matronymicName "Riddle Snape";
-    dct:created "2022-12-10T12:00:00Z"^^xsd:dateTime .
+    dct:created "2022-12-10T12:00:00Z"^^xsd:dateTime;
+    dct:identifier [
+      a adms:Identifier;
+      skos:notation "S4781267"
+      adms:status ex:Registered
+   ]
+
+ex:Registered a skos:Concept.
+ex:Deregistered a skos:Concept.

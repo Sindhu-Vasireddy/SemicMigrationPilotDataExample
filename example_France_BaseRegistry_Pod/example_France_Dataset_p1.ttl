@@ -40,5 +40,13 @@ exfr:p1v1 a foaf:Person ;
     cv:gender "Female";
     dct:identifier "L5689157";
     dct:matronymicName "Luna Potter";
-    dct:created "2022-12-09T12:00:00Z"^^xsd:dateTime .
+    dct:created "2022-12-09T12:00:00Z"^^xsd:dateTime;
+    dct:identifier [
+      a adms:Identifier;
+      skos:notation "L5689157"
+      adms:status ex:Registered
+   ]
+
+ex:Registered a skos:Concept.
+ex:Deregistered a skos:Concept.
 
