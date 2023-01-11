@@ -27,13 +27,13 @@ Display of migratory information, according to the access control rules defined 
 ### Data model
 **Setup:** A registry of base registries is maintained by EU(European Union) using the DCAT spec which contains datasets that point to the individual countries’ base registries. The data registries contain individual countries’ citizen data. An illustrative example is provided here for when a country (say France) request’s data of the French citizens migrated to another Country (say Belgium).
 
-[Example Base Registry Pod for France (Pod-Fr)](example_EU_RegistryofBaseRegistries_Pod) 
+[Example Base Registry Pod for France (Pod-Fr)](example_France_BaseRegistry_Pod)  
 
-[Example Base Registry Pod for Belgium (Pod-Be)](example_Belgium_BaseRegistry_Pod) 
-
-[Example Registry of Base Registries (Pod-EU)](example_France_BaseRegistry_Pod) 
+[Example Registry of Base Registries (Pod-EU)](example_EU_RegistryofBaseRegistries_Pod)
 
 ### System architecture
 **Scenario:** If France wants to see how many of its citizens migrated to Belgium over the past year, then it sends a request to EU requesting the info, of those who migrated to Belgium with their previous domicile as France, from the base registry of Belgium. 
 
 ![System Architecture](Architecture.png)
+
+Figure 1 Block diagram of the Inter-Country Base Registry architecture
