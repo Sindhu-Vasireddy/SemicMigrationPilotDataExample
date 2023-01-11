@@ -29,8 +29,6 @@ Display of migratory information, according to the access control rules defined 
 
 [Example Base Registry Pod for France (Pod-Fr)](example_EU_RegistryofBaseRegistries_Pod) 
 
-[Example Base Registry Pod for Belgium (Pod-Be)](example_Belgium_BaseRegistry_Pod) 
-
 [Example Registry of Base Registries (Pod-EU)](example_France_BaseRegistry_Pod) 
 
 ### System architecture
