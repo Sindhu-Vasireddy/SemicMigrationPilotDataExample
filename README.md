@@ -35,5 +35,16 @@ Display of migratory information, according to the access control rules defined 
 **Scenario:** If France wants to see how many of its citizens migrated to Belgium over the past year, then it sends a request to EU requesting the info, of those who migrated to Belgium with their previous domicile as France, from the base registry of Belgium. 
 
 ![System Architecture](Architecture.png)
+*Figure 1 Block diagram of the Inter-Country Base Registry architecture.*
 
-Figure 1 Block diagram of the Inter-Country Base Registry architecture
+### Implementation details
+
+**Migration Identification:** The person is determined as migrated from country of birth/citizenship to the other country on whose pod their registration data is stored based on the `adms:status` flag. If it is set to `ex:Registered` the person is currently registered in that specific country and upon leaving the person's status is reset to `ex:Deregistered`.
+
+`dct:identifier [
+      a adms:Identifier;
+      skos:notation "L5689157"
+      adms:status ex:Registered
+   ]`
+
+**Data Privacy:** The actual privacy specific details of the migrated citizen will not be shared with the country however only the number of such citizens migrated and related statistics will be shared.
