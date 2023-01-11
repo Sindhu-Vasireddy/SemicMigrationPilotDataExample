@@ -1,0 +1,67 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix exfr: <http://example.fr/> .
+@prefix exbe: <http://example.be/> .
+@prefix exeu: <http://example.eu/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cpsv: <http://purl.org/vocab/cpsv#> .
+
+
+_:a0 cv:hasCompetentAuthority _:b0;
+    dct:description "Citizen Registration of France Municipality";
+    dct:identifier exfr:CitizenRegistry;
+    dct:title "Citizen Registry";
+
+    foaf:homepage exfr:FranceMunicipality;
+    cpsv:produces _:c0.
+
+_:b0 dct:identifier exfr:FranceMunicipality;
+    skos:preferredLabel "France Municipality"@en;
+    dct:spatial "France";
+    dct:title "France Municipality";
+
+    locn:address "Street No: 2, Gare du nord, Paris".
+
+_:a1 cv:hasCompetentAuthority _:b1;
+    dct:description "Citizen Registration of Belgium Municipality";
+    dct:identifier exfr:CitizenRegistry;
+    dct:title "Citizen Registry";
+
+    foaf:homepage exbe:BelgiumMunicipality;
+    cpsv:produces _:c1.
+
+_:b1 dct:identifier exbe:BelgiumMunicipality;
+    skos:preferredLabel "Belgium Municipality"@en;
+    dct:spatial "Belgium";
+    dct:title "Belgium Municipality";
+
+    locn:address "Street No: 12, Brussels Midi, Belgium".
+
+_:d0 a dcat:Catalog;
+    dct:description "Catalog of Base registries of Municipalities of Member States.";
+    dct:identifier exeu:MSCatalog;
+    dct:publisher exeu:EuropeanUnion;
+    dct:title "Catalog of Base registries.";
+
+    dcat:dataset _:e0;
+    dcat:dataset _:e1.
+
+_:c0 a dcat:Resource.
+_:c1 a dcat:Resource.
+
+_:e0  dct:description "France Municipality Citizen Registry Dataset";
+    dct:identifier exfr:FranceCitizenRegistryDataset;
+    dct:title "France Citizen Dataset";
+
+    dcat:contactPoint [a vcard:Organization; vcard:hasUID exfr:FranceMunicipality].
+
+
+_:e1  dct:description "Belgium Municipality Citizen Registry Dataset";
+    dct:identifier exbe:BelgiumCitizenRegistryDataset;
+    dct:title "Belgium Citizen Dataset";
+
+    dcat:contactPoint [a vcard:Organization; vcard:hasUID exbe:BelgiumMunicipality].
+

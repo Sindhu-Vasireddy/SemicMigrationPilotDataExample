@@ -1,0 +1,36 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix adms: <https://www.w3.org/ns/adms#> .
+@prefix prsn: <http://www.w3.org/ns/person#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix exfr: <http://example.fr/> .
+@prefix admin: <http://example.com/admin/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+exfr:FranceCitizenRegistryDataset a ldes:EventStream ;
+    tree:member exfr:p2v1 .
+
+<http://example.fr/FranceCitizenRegistryDataset/?page=2> a tree:Node ;
+    tree:viewDescription [
+        a tree:ViewDescripion;
+        dcat:servesDataset exfr:FranceCitizenRegistryDataset
+    ] .
+
+exfr:p2v1 a foaf:Person
+    adms:versionNotes "First version of the Person Details in the Base Registry" ;
+    dcterms:isVersionOf exfr:p2 ;
+    dcterms:title "Person Details in the Base Registry" ;
+    dct:alternative "Severus";
+    prsn:birthName "Severus Snape";
+    dct:citizenship "Spanish";
+    prsn:countryOfBirth "Spain";
+    prsn:placeOfBirth "Barcelona";
+    cv:birthDate "12-03-1952";
+    cv:domicile "Antwerp";
+    foaf:familyName "Severus";
+    foaf:givenName "Snape";
+    foaf:name "Severus Snape";
+    cv:gender "Male";
+    dct:identifier "S4781267";
+    dct:matronymicName "Riddle Snape";
+    dct:created "2022-12-10T12:00:00Z"^^xsd:dateTime .

@@ -1,0 +1,44 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix adms: <https://www.w3.org/ns/adms#> .
+@prefix prsn: <http://www.w3.org/ns/person#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix exfr: <http://example.fr/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+
+exfr:FranceCitizenRegistryDataset a ldes:EventStream ;
+    tree:member exfr:p1v1 .
+
+<http://example.fr/FranceCitizenRegistryDataset/?page=1> a tree:Node ;
+    tree:viewDescription [
+        a tree:ViewDescripion;
+        dcat:servesDataset exfr:FranceCitizenRegistryDataset
+    ] .
+    tree:relation [
+        a tree:GreaterThanOrEqualToRelation ;
+        tree:path dct:created ;
+        tree:node <http://example.fr/FranceCitizenRegistryDataset/?page=2> ;
+        tree:value "2022-12-10T12:00:00Z"^^xsd:dateTime
+    ] .
+
+
+exfr:p1v1 a foaf:Person ;
+    adms:versionNotes "First version of the Person Details in the Base Registry" ;
+    dcterms:isVersionOf exfr:p1 ;
+    dcterms:title "Person Details in the Base Registry" ;
+    dct:alternative "Loony Lovegood" ;
+    prsn:birthName "Luna Lovegood";
+    dct:citizenship "Belgian" ;
+    prsn:countryOfBirth "Belgium";
+    prsn:placeOfBirth "Ghent";
+    cv:birthDate "24-09-1976";
+    cv:domicile "Paris";
+    foaf:familyName "Lovegood";
+    foaf:givenName "Luna";
+    foaf:name "Luna Lovegood";
+    cv:gender "Female";
+    dct:identifier "L5689157";
+    dct:matronymicName "Luna Potter";
+    dct:created "2022-12-09T12:00:00Z"^^xsd:dateTime .
+

@@ -1,0 +1,128 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix ex:    <http://example.com/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prsn: <http://www.w3.org/ns/person#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix exfr: <http://example.fr/> .
+@prefix admin: <http://example.com/admin/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:FranceRegistryDatasetShape
+    a              sh:NodeShape ;
+    sh:targetClass foaf:Person ;
+    sh:property    ex:requiredAlternative ;
+    sh:property    ex:requiredBirthName ;
+    sh:property    ex:requiredCitizenship ;
+    sh:property    ex:requiredCountryOfBirth ;
+    sh:property    ex:requiredPlaceOfBirth;
+    sh:property    ex:requiredBirthDate ;
+    sh:property    ex:requiredDomicile;
+    sh:property    ex:requiredFamilyName ;
+    sh:property    ex:requiredGivenName ;
+    sh:property    ex:requiredName;
+    sh:property    ex:optionalGender  ;
+    sh:property    ex:requiredMatronymicName;
+    sh:property    ex:requiredIdentifier ;
+    sh:property    ex:requiredDateOfEntry .
+
+ex:requiredAlternative
+    a           sh:PropertyShape ;
+    rdfs:label  "Alternative Name"@en ;
+    sh:path     dct:alternative ; 
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredBirthName 
+    a           sh:PropertyShape ;
+    rdfs:label  "Birth Name"@en ;
+    sh:path     prsn:birthName;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+
+ex:requiredCitizenship
+    a           sh:PropertyShape ;
+    rdfs:label  "Citizenship"@en ;
+    sh:path     dct:citizenship ; 
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredCountryOfBirth
+    a           sh:PropertyShape ;
+    rdfs:label  "Country of Birth"@en ;
+    sh:path     prsn:countryOfBirth ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredPlaceOfBirth
+    a           sh:PropertyShape ;
+    rdfs:label  "Place of Birth"@en ;
+    sh:path     prsn:placeOfBirth ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 . 
+
+ex:requiredBirthDate
+    a           sh:PropertyShape ;
+    rdfs:label  "Birth Date"@en ;
+    sh:path     cv:birthDate ; 
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredDomicile 
+    a           sh:PropertyShape ;
+    rdfs:label  "Domicile"@en ;
+    sh:path     cv:domicile ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredFamilyName
+    a           sh:PropertyShape ;
+    rdfs:label  "Birth Date"@en ;
+    sh:path     foaf:familyName ; 
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredGivenName
+    a           sh:PropertyShape ;
+    rdfs:label  "Given Name"@en ;
+    sh:path     foaf:givenName ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .   
+
+ex:requiredName
+    a           sh:PropertyShape ;
+    rdfs:label  "Name"@en ;
+    sh:path     foaf:name ; 
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:optionalGender
+    a           sh:PropertyShape ;
+    rdfs:label  "Gender"@en ;
+    sh:path     cv:gender ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 0 .   
+
+ex:requiredIdentifier
+    a           sh:PropertyShape ;
+    rdfs:label  "Identifier"@en ;
+    sh:path     dct:identifier ; 
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredMatronymicName
+    a           sh:PropertyShape ;
+    rdfs:label  "Matrymonic Name"@en ;
+    sh:path     dct:matronymicName ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 . 
+
+ex:requiredDateOfEntry
+    a           sh:PropertyShape ;
+    rdfs:label  "Date of Entry Created"^^xsd:dateTime ;
+    sh:path     dct:created ; 
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .

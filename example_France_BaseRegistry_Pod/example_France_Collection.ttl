@@ -1,0 +1,11 @@
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix ex: <http://example.com/> .
+@prefix exfr: <http://example.fr/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+
+exfr:FranceCitizenRegistryDataset a ldes:EventStream ;
+      ldes:timestampPath dcterms:created ;
+      ldes:versionOfPath dcterms:isVersionOf ;
+      tree:shape ex:FranceRegistryDatasetShape ;
+      tree:view <http://example.fr/FranceCitizenRegistryDataset/?page=1>.
