@@ -43,7 +43,7 @@ exfr:p1v1 a foaf:Person ;
     dct:created "2022-12-09T12:00:00Z"^^xsd:dateTime;
     dct:identifier [
       a adms:Identifier;
-      skos:notation "L5689157"
+      skos:notation "L5689157";
       adms:status ex:Registered
    ].
 
