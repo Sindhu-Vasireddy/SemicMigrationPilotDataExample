@@ -44,7 +44,7 @@ exfr:p1v1 a foaf:Person ;
     dct:identifier [
       a adms:Identifier;
       skos:notation "L5689157";
-      adms:status ex:Registered
+      adms:status ex:Registered.
    ].
 
 ex:Registered a skos:Concept.
