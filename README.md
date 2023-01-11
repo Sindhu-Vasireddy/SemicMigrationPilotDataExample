@@ -41,16 +41,10 @@ Display of migratory information, according to the access control rules defined 
 
 **Migration Identification:** The person is determined as migrated from country of birth/citizenship to the other country on whose pod their registration data is stored based on the `adms:status` flag. If it is set to `ex:Registered` the person is currently registered in that specific country and upon leaving the person's status is reset to `ex:Deregistered`.
 
-`dct:identifier 
-
-[
- 
- a adms:Identifier;
- 
- skos:notation "L5689157"
- 
- adms:status ex:Registered
- 
- ]`
+`dct:identifier [
+  a adms:Identifier;
+  skos:notation "L5689157"
+  adms:status ex:Registered
+  ]`
 
 **Data Privacy:** The actual privacy specific details of the migrated citizen will not be shared with the country however only the number of such citizens migrated and related statistics will be shared.
