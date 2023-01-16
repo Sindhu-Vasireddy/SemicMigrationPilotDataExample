@@ -35,7 +35,7 @@ Display of migratory information, according to the access control rules defined 
 **Scenario:** If France wants to see how many of its citizens migrated to Belgium over the past year, then it sends a request to EU requesting the info, of those who migrated to Belgium with their previous domicile as France, from the base registry of Belgium. 
 
 ![System Architecture](Architecture.png)
-<br>*Figure 1 Block diagram of the Inter-Country Base Registry architecture.*
+<br>*Figure 1: Sequence flow of the Inter-Country Base Registry data access requests.*
 
 ### Implementation details
 
